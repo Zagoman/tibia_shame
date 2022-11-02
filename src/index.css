@@ -5,3 +5,15 @@
   --color-lighter: #f5f5f5;
   --color-accent: rgb(23, 237, 130);
 }
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.cards button {
+  display: inline-block;
+  margin-top: 2rem;
+}
+* {
+  list-style: none;
+}

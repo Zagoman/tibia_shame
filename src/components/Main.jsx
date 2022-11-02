@@ -2,7 +2,7 @@ import CharacterList from "./CharacterList";
 
 function Main(props) {
   return (
-    <main>
+    <main className="container">
       <div>
         <h2>Hall of Shame of {props.guild}</h2>
         <CharacterList characters={props.characters} />

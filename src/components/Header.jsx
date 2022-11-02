@@ -18,7 +18,7 @@ function Header(props) {
           <a href="#">guild</a>
         </li>
       </nav> */}
-      <section>
+      <section className="container">
         <h1>International Tibia's Hall of Shame</h1>
         <p>You do not want to be here, but if you are, make sure it is for a honorable cause</p>
         <Form worlds={props.worlds} characters={props.characters} getCharsFromGuild={props.getCharsFromGuild} />

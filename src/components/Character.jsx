@@ -28,10 +28,12 @@ function Character({ character }) {
     : [<li key="none">No deaths</li>];
   return (
     <li>
-      <div>{character.name}</div>
-      <div>{character.rank}</div>
-      <button onClick={() => onCharacterClick(character.name)}>See Deaths</button>
-      <ul>{curDeaths}</ul>
+      <article>
+        <h5>{character.name}</h5>
+        <p>{character.rank}</p>
+        <button onClick={() => onCharacterClick(character.name)}>See Deaths</button>
+        <ul>{curDeaths}</ul>
+      </article>
     </li>
   );
 }
