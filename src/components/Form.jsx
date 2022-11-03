@@ -17,17 +17,17 @@ function Form(props) {
     e.preventDefault();
   }
   function onWorldChange(e) {
-    setWorld(e.target.value);
+    setWorld(() => e.target.value);
   }
   function onGuildChange(e) {
-    setGuild(e.target.value);
+    setGuild(() => e.target.value);
   }
   useEffect(() => {
     if (world) {
       fetch(`https://api.tibiadata.com/v3/guilds/${world}`)
         .then((res) => res.json())
         .then((data) => {
-          setGuilds(data.guilds.active);
+          setGuilds(() => data.guilds.active);
         });
     }
   }, [world]);

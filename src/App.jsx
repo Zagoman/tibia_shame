@@ -12,14 +12,14 @@ function App() {
       .then((res) => res.json())
       .then((returnedData) => {
         // setData(returnedData.guilds.guild);
-        setWorlds(returnedData.worlds["regular_worlds"]);
+        setWorlds(() => returnedData.worlds["regular_worlds"]);
       });
   }, []);
   const payload = {
     worlds: worlds,
     characters: characters,
     getCharsFromGuild(e) {
-      setCharacters(e);
+      setCharacters(() => e);
     },
   };
 

@@ -6,7 +6,7 @@ function Character({ character }) {
   function onCharacterClick(e) {
     // console.log(e.target.textContent.split(" ").join("%20"));
 
-    setPopUp(e.split(" ").join("%20"));
+    setPopUp((oldState) => e.split(" ").join("%20"));
   }
   useEffect(() => {
     if (popUp) {
@@ -14,7 +14,7 @@ function Character({ character }) {
         .then((res) => res.json())
         .then((data) => {
           //   console.log(data.characters.deaths ? data.characters.deaths : "no deaths");
-          setPopUpData(data.characters.deaths ? data.characters.deaths : "");
+          setPopUpData((oldState) => (data.characters.deaths ? data.characters.deaths : ""));
         });
     }
   }, [popUp]);
